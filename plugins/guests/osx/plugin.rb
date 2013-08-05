@@ -21,6 +21,10 @@ module VagrantPlugins
         Cap::ConfigureNetworks
       end
 
+      guest_capability("osx", "mount_vmware_shared_folder") do
+        require_relative "cap/mount_vmware_shared_folder"
+        Cap::MountVmwareSharedFolder
+      end
     end
   end
 end
