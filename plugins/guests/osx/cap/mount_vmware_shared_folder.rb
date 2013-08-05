@@ -15,7 +15,6 @@ module VagrantPlugins
         # sudo ln -fs /mnt/hgfs/-vagrant /vagrant (sudo=false)
 
         def self.mount_vmware_shared_folder(machine, name, guestpath, options)
-          puts "TEST ETST TEST"
           machine.communicate.tap do |comm|
             # clear prior symlink
             if comm.test("sudo test -L \"#{guestpath}\"")
